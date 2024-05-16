@@ -12,3 +12,8 @@ output "vnet_id" {
   description = "VNet ID."
   value       = module.network.vnet_id
 }
+
+output "environment" {
+  description = "Environment used for deployment"
+  value       = var.environment
+}
