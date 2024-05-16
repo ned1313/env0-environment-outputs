@@ -1,0 +1,17 @@
+environments:
+  vnet: 
+    name: 'Virtual Network'
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/ned1313/env0-environment-outputs'
+      path: 'network'
+  aks:
+    name: 'AKS Cluster'
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/ned1313/env0-environment-outputs'
+      path: 'aks'
+    needs:
+      - vnet
