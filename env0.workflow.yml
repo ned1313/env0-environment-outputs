@@ -15,3 +15,12 @@ environments:
       path: 'aks'
     needs:
       - vnet
+  flux:
+    name: 'Flux installation'
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/ned1313/env0-environment-outputs'
+      path: 'flux'
+    needs:
+      - aks
